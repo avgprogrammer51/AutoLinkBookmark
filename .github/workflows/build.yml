@@ -16,11 +16,9 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        
-    - run: chmod +x gradlew
-      continue-on-error: true
-        
-    - run: ./gradlew assembleDebug
+    
+    - name: Build with system Gradle
+      run: gradle --version && gradle assembleDebug
       
     - uses: actions/upload-artifact@v4
       with:
