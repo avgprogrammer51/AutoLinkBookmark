@@ -14,10 +14,10 @@ jobs:
       
     - uses: actions/setup-java@v4
       with:
-        java-version: '11'
+        java-version: '17'
         distribution: 'temurin'
     
-    - name: Build with system Gradle
+    - name: Build with Gradle
       run: gradle --version && gradle assembleDebug
       
     - uses: actions/upload-artifact@v4
