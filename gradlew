@@ -43,8 +43,8 @@ cd "$SAVED" >/dev/null
 APP_NAME="Gradle"
 APP_BASE_NAME=`basename "$0"`
 
-# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
-DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+# Add default JVM options here.
+DEFAULT_JVM_OPTS="-Xmx64m -Xms64m"
 
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD="maximum"
@@ -81,7 +81,6 @@ case "`uname`" in
 esac
 
 CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
-
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
@@ -148,16 +147,6 @@ if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
 fi
 
 EXECUTABLE="$APP_HOME/gradle/wrapper/gradle-wrapper.jar"
-
-# Extract object files from the JAR by name
-extract_jar_files() {
-    jar=$1
-    outputDir=$2
-    mkdir -p "$outputDir"
-    cd "$outputDir"
-    jar xf "$jar"
-    cd - > /dev/null
-}
 
 # Execute Gradle
 exec "$JAVACMD" $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS -classpath "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"
