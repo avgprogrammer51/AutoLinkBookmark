@@ -28,8 +28,7 @@ class ShortcutDetectionService : AccessibilityService() {
         val info = AccessibilityServiceInfo().apply {
             eventTypes = AccessibilityEvent.TYPES_ALL_MASK
             feedbackType = AccessibilityServiceInfo.FEEDBACK_GENERIC
-            flags = AccessibilityServiceInfo.FLAG_RETRIEVE_INTERACTIVE_TREE or
-                    AccessibilityServiceInfo.FLAG_INCLUDE_NOT_IMPORTANT_VIEWS
+            flags = AccessibilityServiceInfo.FLAG_RETRIEVE_INTERACTIVE_TREE
             notificationTimeout = 100
         }
         setServiceInfo(info)
