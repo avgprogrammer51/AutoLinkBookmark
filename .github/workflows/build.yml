@@ -14,13 +14,13 @@ jobs:
       
     - uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: '11'
         distribution: 'temurin'
         
     - run: chmod +x gradlew
       continue-on-error: true
         
-    - run: ./gradlew assembleDebug --stacktrace || gradle assembleDebug --stacktrace
+    - run: ./gradlew assembleDebug
       
     - uses: actions/upload-artifact@v4
       with:
