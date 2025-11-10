@@ -12,61 +12,48 @@
         android:text="AutoLinkBookmark"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        android:marginBottom="10dp" />
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/infoText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Auto-detect shortcuts and bookmark in Chrome"
+        android:text="Auto-bookmark home screen shortcuts"
         android:textSize="12sp"
-        android:textAlignment="center"
-        android:marginBottom="20dp"
-        android:textColor="@android:color/darker_gray" />
+        android:gravity="center"
+        android:layout_marginTop="10dp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="match_parent"
         android:layout_height="8dp"
         style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
         android:max="100" />
 
     <TextView
         android:id="@+id/statusText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Ready to start"
         android:textSize="14sp"
-        android:textAlignment="center"
-        android:minHeight="60dp"
-        android:gravity="center_vertical"
-        android:marginBottom="20dp"
-        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
         android:background="@android:color/darker_gray"
         android:textColor="@android:color/white" />
 
-    <LinearLayout
+    <Button
+        android:id="@+id/startButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:spacing="10dp">
+        android:text="Start"
+        android:layout_marginTop="15dp" />
 
-        <Button
-            android:id="@+id/startButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Start" />
-
-        <Button
-            android:id="@+id/stopButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Stop" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>
