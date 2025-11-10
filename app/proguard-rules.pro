@@ -1,0 +1,3 @@
+-keepattributes *Annotation*
+-keep class com.example.autolinkbookmark.** { *; }
+-keep interface com.example.autolinkbookmark.** { *; }
